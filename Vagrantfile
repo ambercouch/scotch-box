@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
    								v.cpus = 4
    				end
 
+				config.vm.provision :shell, path: "phpmyadmin.sh"
     config.vm.provision "shell", inline: <<-SHELL
 
         ## Only thing you probably really care about is right here
